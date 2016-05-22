@@ -1,0 +1,59 @@
+/*menu*/
+#menus{
+      position:fixed;
+      /* fixed position on mobile phones */
+	  -webkit-backface-visibility:hidden;
+	  top:0px;
+	  left:15%;
+	  width:70%;
+	  text-align:center;
+	  z-index:1;
+	  border: 2px white solid;
+	  opacity: 0.9;
+      -webkit-border-bottom-radius: 5px; /* Safari, Chrome */
+      -khtml-border-bottom-radius: 5px;	   /* Konqueror */
+      -moz-border-bottom-radius: 5px; /* Firefox */
+      border-bottom-left-radius: 5px;
+      border-bottom-right-radius: 5px;
+      box-shadow: 5px 5px 10px #8C8CB2;
+      cursor: pointer;
+      box-shadow: 5px 5px 10px white;	  
+}
+/* gorna belka menu*/
+.mainmenus{	
+	  font-weight:bold;
+	  cursor:pointer;
+	  padding: 10px;
+	  -webkit-border-bottom-radius: 5px; /* Safari, Chrome */
+      -khtml-border-bottom-radius: 5px;	   /* Konqueror */
+      -moz-border-bottom-radius: 5px; /* Firefox */
+      border-bottom-left-radius: 5px;
+      border-bottom-right-radius: 5px;
+	  background:rgb(7,64,115);	
+}
+/*wszystkie podmenu razem*/
+.menuitems{
+	  background-color:rgb(7,64,115);
+	  font-weight:bold;
+	  display:none;
+	  border-color: white;
+	  border-top: 2px white solid;
+      -webkit-border-bottom-radius: 5px; /* Safari, Chrome */
+      -khtml-border-bottom-radius: 5px;	   /* Konqueror */
+      -moz-border-bottom-radius: 5px; /* Firefox */
+      border-bottom-left-radius: 5px;
+      border-bottom-right-radius: 5px;
+      background: -webkit-linear-gradient(rgb(7,64,115), rgb(15,138,247)); /* For Safari 5.1 to 6.0 */
+  	  background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(rgb(7,64,115)), to(rgb(15,138,247))); /* Safari 4-5, Chrome 1-9 */
+  	  background: -o-linear-gradient(rgb(7,64,115), rgb(15,138,247)); /* For Opera 11.1 to 12.0 */
+  	  background: -moz-linear-gradient(rgb(7,64,115), rgb(15,138,247)); /* For Firefox 3.6 to 15 */
+  	  background: linear-gradient(rgb(7,64,115),rgb(15,138,247)); /* Standard syntax */
+}
+/*pojedyncze podmenu*/
+.menuItem{
+	  border-top: 2px white solid;
+	  padding: 10px;
+
+}
+	
+	

@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<head>
+<script type="text/javascript">
+
+var ck_name = /^[A-Za-z0-9 ]{3,20}$/;
+var ck_email = /^([\w-]+(?:\.[\w-]+)*)@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$/i ;
+var ck_username = /^[A-Za-z0-9_]{1,20}$/;
+var ck_password =  /^[A-Za-z0-9!@#$%^&*()_]{6,20}$/;
+
+function validate(form){
+var name = form.name.value;
+var email = form.email.value;
+var username = form.username.value;
+var password = form.password.value;
+var gender = form.gender.value;
+var errors = [];
+ 
+ if (!ck_name.test(name)) {
+  errors[errors.length] = "You valid Name .";
+ }
+ if (!ck_email.test(email)) {
+  errors[errors.length] = "You must enter a valid email 
+address.";
+ }
+ if (!ck_username.test(username)) {
+  errors[errors.length] = "You valid UserName no special 
+char .";
+ }
+ if (!ck_password.test(password)) {
+  errors[errors.length] = "You must enter a valid Password ";
+ }
+ if (gender==0) {
+  errors[errors.length] = "Select Gender";
+ }
+ if (errors.length > 0) {
+
+  reportErrors(errors);
+  return false;
+ }
+  return true;
+}
+function reportErrors(errors){
+ var msg = "Please Enter Valide Data...\n";
+ for (var i = 0; i<errors.length; i++) {
+ var numError = i + 1;
+  msg += "\n" + numError + ". " + errors[i];
+}
+ alert(msg);
+}
+
+</script>
+</head>
+<body>
+
+<form method="post" action="#" onSubmit="return validate(this);" name="form">
+   <div>
+      <span style="font-size:14pt;font-weight:bold;">
+        Proszę podać swoje dane:</span><br />
+      <span style="font-size:smaller;font-style:italic;">
+      (pola oznaczone * muszą zostać wypełnione)</span>
+    </div>
+    <div id="divKomunikat" style="display:none;">
+    </div>
+    <table>
+    <tr>
+      <td><b>Dane personalne:</b></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>imię:</td>
+      <td><input type="text" name="imie" />*</td>
+    </tr>
+    <tr>
+      <td>nazwisko:</td>
+      <td><input type="text" name="nazwisko" />*</td>
+    </tr>
+    <tr>
+      <td><b>Adres:</b></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>ulica:</td>
+      <td><input type="text" name="ulica" /></td>
+    </tr>
+    <tr>
+      <td>nr domu:</td>
+      <td><input type="text" name="nrdomu" /></td>
+    </tr>
+    <tr>
+      <td>kod:</td>
+      <td><input type="text" name="kod" /></td>
+    </tr>
+    <tr>
+      <td>miasto:</td>
+      <td><input type="text" name="miasto" /></td>
+    </tr>
+    <tr>
+      <td>kraj:</td>
+      <td><input type="text" name="kraj" />*</td>
+    </tr>
+    <tr>
+      <td>tel.:</td>
+      <td><input type="text" name="tel" />*</td>
+    </tr>
+    <tr>
+      <td style="text-align:center;" colspan="2">
+        <input type="submit" name="wyslij" 
+               value="   Wyślij!   "  />
+      </td>
+    </tr>
+    </table>
+</form>
+</body>
+</html>

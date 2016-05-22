@@ -1,0 +1,13 @@
+<h1>Dodaj utwór</h1>
+<table>
+<form method="POST" action="AddSong.php" id="formAddHTML" name="form1" enctype="multipart/form-data">
+<tr><td>Nazwa utworu:</td><td> <input type="text" name="sNazwa" id="sNazwa" onkeyup="RexExpTest(this.value,this.name);" /><div style="display:inline;" id="sNazwaBlad"></div></td></tr>
+<tr><td>Wykonawca:</td><td> <input type="text" name="sWykonawca" id="sWykonawca" onkeyup="RexExpTest(this.value,this.name);"/><div id="sWykonawcaBlad"></div></td></tr>
+<tr><td>Nazwa płyty:</td><td> <input type="text" name="sPlyta" id="sPlyta" onkeyup="RexExpTest(this.value,this.name);"/><div id="sPlytaBlad"></div></td></tr>
+<tr><td>Rok:</td><td><input type="text" name="iRok" id="iRok" onkeyup="RexExpTest(this.value,this.name);" /><div id="iRokBlad"></div></td></tr>
+<tr><td rowspan="2">Zdjęcie okładki:<input type="file" name="file" /><br/></td></tr>
+<tr><td rowspan="2"> (dozwolone formaty - <b>jpeg jpg pjpg gif png x-png</b>. Maksymalny rozmiar pliku <b>5MB</b>)</td></tr>
+<tr style="this.display='none';"><td rowspan="2"><input type="hidden" name="wyslano" value="true"/></tr></td>
+<tr><td><input type="submit" class="button" value="Zapisz" ></td></tr>
+</form>
+</table>
